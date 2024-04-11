@@ -44,7 +44,7 @@ def compute_portvals(orders_file="orders-01.csv", start_val=1000000, commission=
 
     for index2, row2 in orders_df.iterrows():
         stock_name = row2[0]
-        order_price = prices[stock_name].ix[index2]
+        order_price = prices[stock_name].loc[index2]
         order_units = row2[2]
 
         # set up signs as multipliers
@@ -96,7 +96,7 @@ def test_code():
     # note that during autograding his function will not be called.
     # Define input parameters
 
-    of = "lec05/marketsim/orders/orders-01.csv"
+    of = "orders-01.csv"
     sv = 1000000
 
     # Process orders

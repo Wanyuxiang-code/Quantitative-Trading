@@ -69,7 +69,7 @@ def compute_momentum(prices_normalized, rolling_days):
 
 def normalize_stocks(prices):
     fill_missing_values(prices)
-    return prices / prices.ix[0, :]
+    return prices / prices.iloc[0]
 
 def fill_missing_values(prices):
     """Fill missing values in data frame, in place."""
